@@ -1,5 +1,11 @@
 # 402Mob Agent Wallet
 
+Local MCP companion: [`mcp/`](mcp/README.md) exposes `wallet_readiness`,
+`wallet_status` and `wallet_bootstrap` through stdio. The host launches it with a
+fixed private directory; startup creates no identity. No payment tools are exposed.
+See the [connection guide](https://evidence.contact/wallet-mcp.md). Companion version
+0.1.0 is available as a site tarball and is not yet published on npm.
+
 A local CLI/library for agents that can run Node.js. It can create an EOA, validate
 and sign its 402Mob enrollment challenge, and store the merchant credential. EIP-191
 enrollment needs no browser, operator token, Base ETH, wallet import, or manual

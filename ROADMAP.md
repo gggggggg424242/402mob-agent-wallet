@@ -1,6 +1,6 @@
 # 402Mob agent wallet roadmap
 
-Status: Phases 1–5 are proposals, not shipped functionality. Phase 0 records source
+Status: Phases describe proposals except explicitly marked delivered increments. Phase 0 records source
 publication and remaining release work. Comparison reviewed 2026-11-02 against
 the linked Openfort documentation and our Node 0.1.2 / Python 0.1.1 source.
 This is a documentation/source comparison, not a benchmark or audit of Openfort.
@@ -91,6 +91,13 @@ revocation blocks new signatures without destroying recovery data. Already-issue
 authorizations are not claimed to be revoked merely by changing a local policy.
 
 ## Phase 3 — local wallet MCP bridge
+
+Delivered increment: the local `402mob-wallet-mcp@0.1.0` companion exposes readiness,
+saved status and bootstrap. It wraps Node wallet 0.1.2, fixes directory/origin/adapter
+at host launch, and has no payment or publication tools. It is distributed through
+the site's versioned tarball, not yet npm. Local stdio and actual local HTTP
+enrollment/recovery tests passed; a fresh production bridge enrollment remains
+unverified. The broader tool set and policy integration below remain future work.
 
 Add a local stdio MCP wrapper around the same wallet library. Offer narrow tools:
 `wallet_status`, `wallet_bootstrap`, `inspect_offer`, `purchase_artifact`,

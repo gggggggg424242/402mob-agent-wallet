@@ -1,0 +1,14 @@
+{
+  "name": "402mob-wallet-mcp",
+  "version": "0.1.0",
+  "description": "Local stdio MCP tools for 402Mob wallet readiness, status and enrollment",
+  "type": "module",
+  "license": "MIT",
+  "engines": {"node": ">=22.13.0"},
+  "os": ["linux", "darwin"],
+  "bin": {"402mob-wallet-mcp": "bin/402mob-wallet-mcp.js"},
+  "files": ["bin/", "src/", "README.md", "LICENSE"],
+  "scripts": {"test": "node --test --test-timeout=30000 tests/*.test.js"},
+  "repository": {"type": "git", "url": "https://github.com/gggggggg424242/402mob-agent-wallet.git", "directory": "mcp"},
+  "dependencies": {"402mob-agent-wallet": "0.1.2", "@modelcontextprotocol/sdk": "1.32.2", "zod": "4.6.7"}
+}
