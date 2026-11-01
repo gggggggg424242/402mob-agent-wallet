@@ -1,0 +1,58 @@
+{
+  "name": "402mob-agent-wallet",
+  "version": "0.1.2",
+  "description": "Agent-controlled EVM wallet, 402Mob enrollment, and recoverable USDC purchases",
+  "license": "MIT",
+  "homepage": "https://evidence.contact/agent-wallet.md",
+  "repository": {"type": "git", "url": "https://github.com/gggggggg424242/402mob-agent-wallet.git"},
+  "bugs": {"url": "https://github.com/gggggggg424242/402mob-agent-wallet/issues"},
+  "scripts": {
+    "wallet:setup": "npm install",
+    "wallet": "node bin/402mob-wallet.js",
+    "test": "node --test --test-timeout=30000 tests/*.test.js",
+    "test:wallet": "npm test",
+    "test:integration": "node --import tsx --import ./integration/bootstrap.js --test --test-timeout=30000 integration/wallet.test.js"
+  },
+  "devDependencies": {"tsx": "4.20.0"},
+  "keywords": [
+    "402mob",
+    "agent-wallet",
+    "x402",
+    "base",
+    "usdc",
+    "eip-191"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "examples/",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "402mob-wallet": "bin/402mob-wallet.js"
+  },
+  "main": "./src/wallet.js",
+  "types": "./src/wallet.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/wallet.d.ts",
+      "import": "./src/wallet.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "402mob-merchant-sdk": "0.3.1",
+    "viem": "2.57.11"
+  },
+  "os": [
+    "linux",
+    "darwin"
+  ]
+}
